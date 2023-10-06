@@ -9,9 +9,6 @@ public class DialogContent extends Parent{
 
     public DialogContent(){
         PageFactory.initElements(GWD.getDriver(),this);
-
-
-
     }
     @FindBy(css="[class='login']")
     public WebElement login;
@@ -42,17 +39,20 @@ public class DialogContent extends Parent{
     @FindBy(id="SubmitLogin")
     public WebElement SubmitLogin;
 
-    @FindBy(css="[title='View a list of my addresses']")
+    @FindBy(linkText="[title='Addresses']")
     public WebElement addresses;
 
-    @FindBy(linkText="(//a[@class='btn btn-default button button-medium'])[2]")
+    @FindBy(xpath="(//a[@class='btn btn-default button button-medium'])[2]")
     public WebElement button;
 
     @FindBy(id="address1")
     public WebElement address1;
 
     @FindBy(id="city")
+
     public WebElement city;
+    @FindBy(xpath="(//i[@class='icon-building'])[2]")
+    public WebElement Myaddress;
 
     @FindBy(id="id_state")
     public WebElement id_state;
@@ -75,7 +75,7 @@ public class DialogContent extends Parent{
     @FindBy(id="submitAddress")
     public WebElement submitAddress;
 
-    @FindBy(linkText="(//a[@class='sf-with-ul'])[1]")
+    @FindBy(xpath="(//a[@class='sf-with-ul'])[1]")
     public WebElement with;
 
     @FindBy(css="[class='grower OPEN']")

@@ -34,7 +34,7 @@ public class Parent {
     }
 
     public void verifyContainsText(WebElement element, String value){
-        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+//        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
         //action la ESC ye basarak açık kutucuk veya mesaj var ise kapat
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
